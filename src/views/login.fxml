@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.login">
+   <children>
+      <ImageView fitHeight="418.0" fitWidth="666.0" layoutX="-55.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/fondo1.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="idUser" layoutX="187.0" layoutY="129.0" onAction="#ButtonLogin" opacity="0.95" promptText="Ingrese su usuario" style="-fx-background-radius: 50; -fx-background-color: white; -fx-border-color: #197DC5; -fx-border-radius: 50;">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </TextField>
+      <PasswordField fx:id="idPass" layoutX="187.0" layoutY="204.0" onAction="#ButtonLogin" opacity="0.95" promptText="Ingrese su contraseña" style="-fx-background-radius: 50; -fx-background-color: white; -fx-border-radius: 50; -fx-border-color: #197DC5;">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </PasswordField>
+      <Button fx:id="btnLogin" layoutX="187.0" layoutY="252.0" mnemonicParsing="false" onAction="#ButtonLogin" prefHeight="33.0" prefWidth="226.0" style="-fx-background-radius: 10; -fx-background-color: red;" text="Ingresar" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnSignUp" layoutX="351.0" layoutY="276.0" mnemonicParsing="false" onAction="#handlerVistaSignUp" prefHeight="33.0" prefWidth="226.0" style="-fx-background-radius: 10; -fx-background-color: #345287;" text="Registrarse" textFill="WHITE" visible="false">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font></Button>
+      <Label layoutX="243.0" layoutY="181.0" text="Contraseña">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="218.0" layoutY="106.0" text="Nombre de usuario">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="188.0" layoutY="53.0" text="Iniciar Sesion">
+         <font>
+            <Font name="Arial Bold" size="36.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

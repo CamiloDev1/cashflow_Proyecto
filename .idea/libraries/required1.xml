@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="required1">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../../../dEV7/HibernateCoreJava/hibernateJarFiles/required" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/../../../dEV7/HibernateCoreJava/hibernateJarFiles/required" recursive="false" />
+  </library>
+</component>
