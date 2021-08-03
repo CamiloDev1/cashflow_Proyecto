@@ -5,7 +5,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
@@ -62,11 +61,6 @@ public class InformacionIndicadoresdeDineroController {
     public void BtnGuardar1() {
     CuentasporCobrarDAO dao = new CuentasporCobrarDAO();
         dao.GuardarDatos(Integer.valueOf(txtNSem1.getText()), txtRazonSocial1.getText(),Double.valueOf(txtMonto1.getText()), Date.valueOf(dtpkrCxCobrar.getValue()) );
-        Alert mensaje = new Alert(Alert.AlertType.INFORMATION);
-        mensaje.setTitle("Registro exitoso");
-        mensaje.setContentText("La Cuenta Por cobrar se a registrado exitosamente :D");
-        mensaje.setHeaderText("Resultado:");
-        mensaje.show();
     }
 
 
@@ -74,22 +68,12 @@ public class InformacionIndicadoresdeDineroController {
     public void BtnGuardar2(){
         CuentasporpagarDAO dao = new CuentasporpagarDAO();
         dao.GuardarDatos(Integer.valueOf(txtNSem2.getText()), txtRazonSocial2.getText(),Double.valueOf(txtMonto2.getText()), Date.valueOf(dtpkrCxPagar.getValue()) );
-        Alert mensaje = new Alert(Alert.AlertType.INFORMATION);
-        mensaje.setTitle("Registro exitoso");
-        mensaje.setContentText("La Cuentas por pagar se a registrado exitosamente :D");
-        mensaje.setHeaderText("Resultado:");
-        mensaje.show();
     }
 
     @FXML
     public void BtnGuardar3(){
         BancosDAO dao = new BancosDAO();
         dao.GuardarDatos(Integer.valueOf(txtNSem3.getText()), txtDescripcion.getText(), Double.valueOf(txtMonto3.getText()), Date.valueOf(dtpkrBancos.getValue()));
-        Alert mensaje = new Alert(Alert.AlertType.INFORMATION);
-        mensaje.setTitle("Registro exitoso");
-        mensaje.setContentText("El Banco se a registrado exitosamente :D");
-        mensaje.setHeaderText("Resultado:");
-        mensaje.show();
     }
     @FXML
     private void cerrarVentana(ActionEvent event) {

@@ -128,11 +128,7 @@ public class FlujodeEfectivoController implements Initializable {
         }
 
         dao.GuardarDatos(dtpkrFecha.getValue(), String.valueOf(rbEntrada.isSelected()?"E":"S"), txtDescripcion.getText(), cmbCategoria.getSelectionModel().getSelectedItem(), cmbSubCategoria.getSelectionModel().getSelectedItem(), Double.valueOf(txtCantidad.getText()), Integer.valueOf(txtNumSemana.getText()), Clasific );
-        Alert mensaje = new Alert(Alert.AlertType.INFORMATION);
-        mensaje.setTitle("Registro exitoso");
-        mensaje.setContentText("El flujo se a registrado exitosamente :D");
-        mensaje.setHeaderText("Resultado:");
-        mensaje.show();
+
         olListaFlujodeEfectivo.addAll(dao.listaFlujodeEfectivo());
         tblListaFlujodeEfectivo.setItems(olListaFlujodeEfectivo);
     }

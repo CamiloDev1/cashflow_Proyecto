@@ -72,11 +72,6 @@ public class CategoriasController  implements Initializable {
         CategoriasDAO dao = new CategoriasDAO();
         olListaCategorias = FXCollections.observableArrayList();
         dao.GuardarDatos(cmbClasificacion.getSelectionModel().getSelectedItem(), idCategoria.getText(), idSubCategoria.getText() );
-        Alert mensaje = new Alert(Alert.AlertType.INFORMATION);
-        mensaje.setTitle("Registro exitoso");
-        mensaje.setContentText("La Categoria se a registrado exitosamente :D");
-        mensaje.setHeaderText("Resultado:");
-        mensaje.show();
         olListaCategorias.addAll(dao.listaCategorias());
         tblListaCategorias.setItems(olListaCategorias);
     }
