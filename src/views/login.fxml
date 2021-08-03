@@ -7,48 +7,64 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.login">
+<AnchorPane prefHeight="516.0" prefWidth="686.0" style="-fx-background-color: #395C67;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.login">
    <children>
-      <ImageView fitHeight="418.0" fitWidth="666.0" layoutX="-55.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../images/fondo1.jpg" />
-         </image>
-      </ImageView>
-      <TextField fx:id="idUser" layoutX="187.0" layoutY="129.0" onAction="#ButtonLogin" opacity="0.95" promptText="Ingrese su usuario" style="-fx-background-radius: 50; -fx-background-color: white; -fx-border-color: #197DC5; -fx-border-radius: 50;">
-         <font>
-            <Font name="Arial Bold" size="18.0" />
-         </font>
-      </TextField>
-      <PasswordField fx:id="idPass" layoutX="187.0" layoutY="204.0" onAction="#ButtonLogin" opacity="0.95" promptText="Ingrese su contraseña" style="-fx-background-radius: 50; -fx-background-color: white; -fx-border-radius: 50; -fx-border-color: #197DC5;">
-         <font>
-            <Font name="Arial Bold" size="18.0" />
-         </font>
-      </PasswordField>
-      <Button fx:id="btnLogin" layoutX="187.0" layoutY="252.0" mnemonicParsing="false" onAction="#ButtonLogin" prefHeight="33.0" prefWidth="226.0" style="-fx-background-radius: 10; -fx-background-color: red;" text="Ingresar" textFill="WHITE">
+      <Pane layoutX="34.0" layoutY="45.0" prefHeight="422.0" prefWidth="621.0" style="-fx-background-color: #FFFF;">
+         <children>
+            <Label layoutX="96.0" layoutY="24.0" text="Cashflow">
+               <font>
+                  <Font size="44.0" />
+               </font>
+            </Label>
+            <TextField fx:id="idUser" layoutX="384.0" layoutY="126.0" onAction="#ButtonLogin" opacity="0.95" prefHeight="36.0" prefWidth="226.0" promptText="Usuario" style="-fx-background-radius: 00; -fx-background-color: white; -fx-border-color: #197DC5; -fx-border-radius: 00;">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="idPass" layoutX="384.0" layoutY="226.0" onAction="#ButtonLogin" opacity="0.95" prefHeight="36.0" prefWidth="226.0" promptText="Contrasena" style="-fx-background-radius: 00; -fx-background-color: white; -fx-border-radius: 00; -fx-border-color: #197DC5;">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </PasswordField>
+            <Button fx:id="btnLogin" layoutX="387.0" layoutY="324.0" mnemonicParsing="false" onAction="#ButtonLogin" prefHeight="33.0" prefWidth="218.0" style="-fx-background-radius: 00; -fx-background-color: #FEC101;" text="Iniciar" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Button>
+            <Label layoutX="387.0" layoutY="88.0" text="Nombre de usuario">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="387.0" layoutY="194.0" text="Contraseña">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="380.0" layoutY="20.0" text="Bienvenid@">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="28.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="57.0" fitWidth="60.0" layoutX="23.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imagen/pngwing.com.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="250.0" fitWidth="368.0" layoutX="14.0" layoutY="105.0">
+               <image>
+                  <Image url="@imagen/login.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Button fx:id="btnSignUp" layoutX="351.0" layoutY="276.0" mnemonicParsing="false" onAction="#handlerVistaSignUp" prefHeight="33.0" prefWidth="226.0" style="-fx-background-radius: 10; -fx-background-color: #345287;" text="Registrarse" textFill="WHITE" visible="false">
          <font>
             <Font name="Arial Bold" size="18.0" />
          </font>
       </Button>
-      <Button fx:id="btnSignUp" layoutX="351.0" layoutY="276.0" mnemonicParsing="false" onAction="#handlerVistaSignUp" prefHeight="33.0" prefWidth="226.0" style="-fx-background-radius: 10; -fx-background-color: #345287;" text="Registrarse" textFill="WHITE" visible="false">
-         <font>
-            <Font name="Arial Bold" size="18.0" />
-         </font></Button>
-      <Label layoutX="243.0" layoutY="181.0" text="Contraseña">
-         <font>
-            <Font name="Arial Bold" size="18.0" />
-         </font>
-      </Label>
-      <Label layoutX="218.0" layoutY="106.0" text="Nombre de usuario">
-         <font>
-            <Font name="Arial Bold" size="18.0" />
-         </font>
-      </Label>
-      <Label layoutX="188.0" layoutY="53.0" text="Iniciar Sesion">
-         <font>
-            <Font name="Arial Bold" size="36.0" />
-         </font>
-      </Label>
    </children>
 </AnchorPane>

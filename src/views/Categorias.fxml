@@ -7,50 +7,64 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="746.0" style="-fx-background-color: #202124;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.CategoriasController">
+<AnchorPane prefHeight="561.0" prefWidth="628.0" style="-fx-background-color: #FFFF;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.CategoriasController">
    <children>
-      <TableView fx:id="tblListaCategorias" layoutX="14.0" layoutY="74.0" prefHeight="253.0" prefWidth="368.0" style="-fx-border-color: black;">
+      <TableView fx:id="tblListaCategorias" layoutX="14.0" layoutY="154.0" prefHeight="229.0" prefWidth="306.0" style="-fx-border-color: black;">
         <columns>
-          <TableColumn fx:id="clmnClasificacion" prefWidth="140.0" text="Clasificacion" />
-          <TableColumn fx:id="clmnCategoria" prefWidth="98.0" text="Categoria" />
-            <TableColumn fx:id="clmnSubCategoria" prefWidth="129.0" text="Sub-Categoria" />
+          <TableColumn fx:id="clmnClasificacion" prefWidth="104.66665649414062" text="Clasificacion" />
+          <TableColumn fx:id="clmnCategoria" prefWidth="91.33334350585938" text="Categoria" />
+            <TableColumn fx:id="clmnSubCategoria" prefWidth="108.66671752929688" text="Sub-Categoria" />
         </columns>
       </TableView>
-      <Label layoutX="417.0" layoutY="87.0" text="Clasificacion" textFill="#3e86a0">
+      <Pane layoutX="378.0" layoutY="154.0" prefHeight="229.0" prefWidth="265.0" style="-fx-background-color: #8FC9AE;">
+         <children>
+            <Label layoutX="13.0" layoutY="24.0" text="Clasificacion">
+               <font>
+                  <Font name="Comic Sans MS" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="76.0" text="Categoria">
+               <font>
+                  <Font name="Comic Sans MS" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="132.0" text="Sub-Categoria">
+               <font>
+                  <Font name="Comic Sans MS" size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cmbClasificacion" layoutX="119.0" layoutY="18.0" prefHeight="28.0" prefWidth="132.0" style="-fx-border-color: black;" />
+            <TextField fx:id="idCategoria" layoutX="119.0" layoutY="70.0" prefHeight="28.0" prefWidth="132.0" promptText="Ingrese la Categoria" style="-fx-border-color: black;" />
+            <TextField fx:id="idSubCategoria" layoutX="119.0" layoutY="126.0" prefHeight="25.0" prefWidth="132.0" promptText="Ingrese la Subcategoria" style="-fx-border-color: black;" />
+            <Button fx:id="idGuardar" layoutX="119.0" layoutY="183.0" mnemonicParsing="false" onAction="#BtnGuardar" prefHeight="25.0" prefWidth="132.0" style="-fx-background-color: #3B8098;" text="Guardar" textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Label layoutX="22.0" layoutY="99.0" text="Lista de categorias" textFill="#3f625c">
          <font>
-            <Font name="Arial" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="416.0" layoutY="141.0" text="Categoria" textFill="#3e86a0">
-         <font>
-            <Font name="Arial" size="14.0" />
-         </font>
-      </Label>
-      <TextField fx:id="idCategoria" layoutX="516.0" layoutY="136.0" prefHeight="25.0" prefWidth="216.0" promptText="Ingrese la Categoria" style="-fx-border-color: black;" />
-      <ComboBox fx:id="cmbClasificacion" layoutX="516.0" layoutY="83.0" prefHeight="25.0" prefWidth="216.0" style="-fx-border-color: black;" />
-      <Label layoutX="415.0" layoutY="184.0" text="Sub-Categoria" textFill="#3e86a0">
-         <font>
-            <Font name="Arial" size="14.0" />
-         </font>
-      </Label>
-      <TextField fx:id="idSubCategoria" layoutX="516.0" layoutY="180.0" prefHeight="25.0" prefWidth="216.0" promptText="Ingrese la Subcategoria" style="-fx-border-color: black;" />
-      <Button fx:id="idGuardar" layoutX="648.0" layoutY="217.0" mnemonicParsing="false" onAction="#BtnGuardar" prefHeight="28.0" prefWidth="79.0" style="-fx-background-color: #3B8098;" text="Guardar" textFill="WHITE">
-         <font>
-            <Font name="Arial Bold" size="14.0" />
-         </font></Button>
-      <Label layoutX="14.0" layoutY="50.0" text="Lista de categorias" textFill="#3b8098">
-         <font>
-            <Font name="Arial" size="14.0" />
+            <Font name="Comic Sans MS" size="18.0" />
          </font>
       </Label>
       <Button layoutX="457.0" layoutY="241.0" mnemonicParsing="false" style="-fx-border-color: black; -fx-background-color: white;" text="Nuevo" visible="false" />
       <Button layoutX="597.0" layoutY="241.0" mnemonicParsing="false" style="-fx-border-color: black; -fx-background-color: white;" text="Actualizar" visible="false" />
       <Button layoutX="524.0" layoutY="241.0" mnemonicParsing="false" style="-fx-border-color: black; -fx-background-color: white;" text="Eliminar" visible="false" />
-      <Button fx:id="btnCerrar" layoutX="664.0" layoutY="25.0" mnemonicParsing="false" onAction="#cerrarVentana" prefHeight="25.0" prefWidth="61.0" style="-fx-background-color: #FF4343;" text="Cerrar" textFill="WHITE">
+      <Button fx:id="btnCerrar" layoutX="14.0" layoutY="474.0" mnemonicParsing="false" onAction="#cerrarVentana" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: #FEC101;" text="Cerrar">
          <font>
-            <Font name="Arial Bold" size="14.0" />
+            <Font name="Comic Sans MS Bold" size="14.0" />
          </font></Button>
+      <Pane prefHeight="62.0" prefWidth="668.0" style="-fx-background-color: #BDDAA5;" />
+      <Pane layoutY="522.0" prefHeight="25.0" prefWidth="668.0" style="-fx-background-color: #BDDAA5;" />
+      <Text fill="#3f625c" layoutX="97.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Categorías (GAOs, Costos de Venta e Ingresos)">
+         <font>
+            <Font name="Comic Sans MS" size="20.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>

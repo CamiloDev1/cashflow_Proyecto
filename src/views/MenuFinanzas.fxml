@@ -4,32 +4,18 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.MenuFinanzasController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="659.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.MenuFinanzasController">
    <children>
-      <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="400.0" fitWidth="659.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../BDfondos/Menu.jpg" />
          </image>
       </ImageView>
-      <Button fx:id="btnCategorias" layoutX="14.0" layoutY="182.0" mnemonicParsing="false" onAction="#vistaCategorias" prefHeight="82.0" prefWidth="172.0" style="-fx-background-radius: 10; -fx-background-color: red;" text="Categorias" textFill="WHITE">
-         <font>
-            <Font name="Arial Narrow" size="20.0" />
-         </font>
-      </Button>
-      <Button fx:id="btnFlujodeEfectivo" layoutX="195.0" layoutY="182.0" mnemonicParsing="false" onAction="#vistaFlujodeEfectivo" prefHeight="82.0" prefWidth="172.0" style="-fx-background-radius: 10; -fx-background-color: red;" text="Flujo de efectivo" textFill="WHITE">
-         <font>
-            <Font name="Arial Narrow" size="20.0" />
-         </font>
-      </Button>
       <Text layoutX="195.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu Principal">
-         <font>
-            <Font name="Arial Bold" size="30.0" />
-         </font>
-      </Text>
-      <Text fill="#fac97c" layoutX="3.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cash Flow">
          <font>
             <Font name="Arial Bold" size="30.0" />
          </font>
@@ -39,10 +25,47 @@
             <Font name="Arial Bold" size="14.0" />
          </font>
       </Button>
-      <Button fx:id="btnIndicadoresdeDinero" layoutX="377.0" layoutY="182.0" mnemonicParsing="false" onAction="#vistaIndicadoresdeDinero" prefHeight="82.0" prefWidth="209.0" style="-fx-background-radius: 10; -fx-background-color: red;" text="Indicadores de dinero" textFill="WHITE">
-         <font>
-            <Font name="Arial Narrow" size="20.0" />
-         </font>
-      </Button>
+      <Pane layoutX="14.0" layoutY="90.0" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black; -fx-background-color: ffffff; -fx-border-radius: 10px;">
+         <children>
+            <Button fx:id="btnCategorias" layoutX="15.0" layoutY="147.0" mnemonicParsing="false" onAction="#vistaCategorias" prefHeight="39.0" prefWidth="170.0" style="-fx-background-radius: 30px; -fx-background-color: #395C67; -fx-border-color: #000000;" text="Categorias" textFill="WHITE">
+               <font>
+                  <Font name="Arial Narrow" size="15.0" />
+               </font>
+            </Button>
+            <Text layoutX="10.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Es importante tener actualizado elnombre de cada una de las categoríasen las que se clasifican los gastosoperativos, gastos administrativos,costos de venta e ingresos." textAlignment="CENTER" wrappingWidth="182.0">
+               <font>
+                  <Font name="Comic Sans MS" size="10.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="236.0" layoutY="91.0" prefHeight="200.0" prefWidth="189.0" style="-fx-background-color: #8FC9AE; -fx-border-radius: 10px; -fx-border-color: #000000;">
+         <children>
+            <Button fx:id="btnFlujodeEfectivo" layoutX="10.0" layoutY="147.0" mnemonicParsing="false" onAction="#vistaFlujodeEfectivo" prefHeight="39.0" prefWidth="170.0" style="-fx-background-radius: 10; -fx-border-color: #000000; -fx-background-color: ffffff;" text="Flujo de efectivo">
+               <font>
+                  <Font name="Arial Narrow" size="14.0" />
+               </font>
+            </Button>
+            <Text layoutX="10.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registro de las entradas y salidas que se realizan durante el dia. No esposible modificar los registros al menos que tenga la autorización correspondiente." textAlignment="CENTER" wrappingWidth="170.0">
+               <font>
+                  <Font name="Comic Sans MS" size="10.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="445.0" layoutY="90.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #EBEBEB; -fx-border-color: #000000; -fx-border-radius: 10px;">
+         <children>
+            <Button fx:id="btnIndicadoresdeDinero" layoutX="15.0" layoutY="147.0" mnemonicParsing="false" onAction="#vistaIndicadoresdeDinero" prefHeight="39.0" prefWidth="170.0" style="-fx-background-radius: 10; -fx-background-color: #8FC9AE; -fx-border-color: #000000;" text="Indicadores de dinero" textFill="WHITE">
+               <font>
+                  <Font name="Arial Narrow" size="14.0" />
+               </font>
+            </Button>
+            <Text layoutX="44.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registro semanal de cuentas por cobrar, por pagar y bancos.Reportes de indicadores semanales ymensuales." textAlignment="CENTER" wrappingWidth="114.0">
+               <font>
+                  <Font name="Comic Sans MS" size="10.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
    </children>
 </AnchorPane>
