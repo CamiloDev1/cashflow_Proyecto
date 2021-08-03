@@ -28,7 +28,7 @@ public class MenuFinanzasController {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Categorias.fxml"));
             AnchorPane page = (AnchorPane) loader.load();
             Stage stage = new Stage();
-            stage.setScene(new Scene(page, 750, 450));
+            stage.setScene(new Scene(page));
             stage.setTitle("Categorias");
             stage.show();
 
@@ -89,7 +89,7 @@ public class MenuFinanzasController {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("login.fxml"));
             AnchorPane page = (AnchorPane) loader.load();
             Stage stage = new Stage();
-            stage.setScene(new Scene(page, 600, 400));
+            stage.setScene(new Scene(page));
             stage.setTitle("Menu Principal");
             stage.show();
         } catch (IOException e) {

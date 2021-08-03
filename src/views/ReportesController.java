@@ -1051,7 +1051,7 @@ else {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("MenuIndicadoresdeDinero.fxml"));
             AnchorPane page = (AnchorPane) loader.load();
             Stage stage = new Stage();
-            stage.setScene(new Scene(page, 600, 400));
+            stage.setScene(new Scene(page));
             stage.setTitle("MenuIndicadoresdeDinero");
             stage.show();
         } catch (IOException e) {

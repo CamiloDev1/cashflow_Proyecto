@@ -5,29 +5,25 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="659.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.MenuFinanzasController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="612.0" prefWidth="762.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.MenuFinanzasController">
    <children>
-      <ImageView fitHeight="400.0" fitWidth="659.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../BDfondos/Menu.jpg" />
-         </image>
-      </ImageView>
-      <Text layoutX="195.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu Principal">
+      <Text layoutX="107.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Finanzas">
          <font>
-            <Font name="Arial Bold" size="30.0" />
+            <Font name="Comic Sans MS" size="25.0" />
          </font>
       </Text>
-      <Button layoutX="528.0" layoutY="18.0" mnemonicParsing="false" onAction="#cerrarVentana" style="-fx-background-color: #FF4343;" text="Cerrar" textFill="WHITE">
+      <Button layoutX="647.0" layoutY="540.0" mnemonicParsing="false" onAction="#cerrarVentana" prefHeight="38.0" prefWidth="91.0" style="-fx-background-color: #FEC101; -fx-background-radius: 10px; -fx-border-color: black;" text="Exit" textFill="WHITE">
          <font>
-            <Font name="Arial Bold" size="14.0" />
+            <Font name="Comic Sans MS Bold" size="17.0" />
          </font>
       </Button>
-      <Pane layoutX="14.0" layoutY="90.0" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black; -fx-background-color: ffffff; -fx-border-radius: 10px;">
+      <Pane layoutX="107.0" layoutY="206.0" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black; -fx-background-color: ffffff; -fx-border-radius: 10px;">
          <children>
-            <Button fx:id="btnCategorias" layoutX="15.0" layoutY="147.0" mnemonicParsing="false" onAction="#vistaCategorias" prefHeight="39.0" prefWidth="170.0" style="-fx-background-radius: 30px; -fx-background-color: #395C67; -fx-border-color: #000000;" text="Categorias" textFill="WHITE">
+            <Button fx:id="btnCategorias" layoutX="15.0" layoutY="147.0" mnemonicParsing="false" onAction="#vistaCategorias" prefHeight="39.0" prefWidth="170.0" style="-fx-background-radius: 20px; -fx-background-color: #395C67; -fx-border-color: #000000;" text="Categorias" textFill="WHITE">
                <font>
                   <Font name="Arial Narrow" size="15.0" />
                </font>
@@ -39,9 +35,9 @@
             </Text>
          </children>
       </Pane>
-      <Pane layoutX="236.0" layoutY="91.0" prefHeight="200.0" prefWidth="189.0" style="-fx-background-color: #8FC9AE; -fx-border-radius: 10px; -fx-border-color: #000000;">
+      <Pane layoutX="329.0" layoutY="207.0" prefHeight="200.0" prefWidth="189.0" style="-fx-background-color: #8FC9AE; -fx-border-radius: 10px; -fx-border-color: #000000;">
          <children>
-            <Button fx:id="btnFlujodeEfectivo" layoutX="10.0" layoutY="147.0" mnemonicParsing="false" onAction="#vistaFlujodeEfectivo" prefHeight="39.0" prefWidth="170.0" style="-fx-background-radius: 10; -fx-border-color: #000000; -fx-background-color: ffffff;" text="Flujo de efectivo">
+            <Button fx:id="btnFlujodeEfectivo" layoutX="10.0" layoutY="147.0" mnemonicParsing="false" onAction="#vistaFlujodeEfectivo" prefHeight="39.0" prefWidth="170.0" style="-fx-background-radius: 20px; -fx-border-color: #000000; -fx-background-color: ffffff;" text="Flujo de efectivo">
                <font>
                   <Font name="Arial Narrow" size="14.0" />
                </font>
@@ -53,9 +49,9 @@
             </Text>
          </children>
       </Pane>
-      <Pane layoutX="445.0" layoutY="90.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #EBEBEB; -fx-border-color: #000000; -fx-border-radius: 10px;">
+      <Pane layoutX="538.0" layoutY="206.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #EBEBEB; -fx-border-color: #000000; -fx-border-radius: 10px;">
          <children>
-            <Button fx:id="btnIndicadoresdeDinero" layoutX="15.0" layoutY="147.0" mnemonicParsing="false" onAction="#vistaIndicadoresdeDinero" prefHeight="39.0" prefWidth="170.0" style="-fx-background-radius: 10; -fx-background-color: #8FC9AE; -fx-border-color: #000000;" text="Indicadores de dinero" textFill="WHITE">
+            <Button fx:id="btnIndicadoresdeDinero" layoutX="15.0" layoutY="147.0" mnemonicParsing="false" onAction="#vistaIndicadoresdeDinero" prefHeight="39.0" prefWidth="170.0" style="-fx-background-radius: 20px; -fx-background-color: #8FC9AE; -fx-border-color: #000000;" text="Indicadores de dinero" textFill="WHITE">
                <font>
                   <Font name="Arial Narrow" size="14.0" />
                </font>
@@ -67,5 +63,26 @@
             </Text>
          </children>
       </Pane>
+      <AnchorPane layoutX="14.0" layoutY="12.0" prefHeight="591.0" prefWidth="77.0" style="-fx-border-color: black; -fx-background-color: #EBEBEB;">
+         <children>
+            <ImageView fitHeight="57.0" fitWidth="55.0" layoutX="11.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Clasflow/src/View/img/pngwing.com.png" />
+               </image>
+            </ImageView>
+            <Line endX="-100.0" endY="91.0" layoutX="138.0" layoutY="358.0" startX="-100.0" />
+            <Line endX="-100.0" endY="91.0" layoutX="138.0" layoutY="115.0" startX="-100.0" />
+            <ImageView fitHeight="57.0" fitWidth="55.0" layoutX="12.0" layoutY="251.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Clasflow/src/View/img/lo1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="73.0" fitWidth="77.0" layoutY="479.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Clasflow/src/View/img/bank.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

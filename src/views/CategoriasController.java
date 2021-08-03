@@ -95,7 +95,7 @@ public class CategoriasController  implements Initializable {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("MenuFinanzas.fxml"));
             AnchorPane page = (AnchorPane) loader.load();
             Stage stage = new Stage();
-            stage.setScene(new Scene(page, 600, 400));
+            stage.setScene(new Scene(page));
             stage.setTitle("MenuFinanzas");
             stage.show();
         } catch (IOException e) {
